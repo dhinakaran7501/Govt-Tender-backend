@@ -26,6 +26,5 @@ server.get('/', (_, res: Response) => {
 });
 
 server.listen(config.port, () => {
-  console.log('first');
   logger.info(`App is listening on port ${config.port}`);
 });
