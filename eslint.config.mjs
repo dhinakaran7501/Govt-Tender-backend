@@ -38,6 +38,7 @@ export default [
       "arrow-spacing": ["error", { before: true, after: true }],
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/explicit-function-return-type": "warn",
+      "no-useless-catch": "warn"
     },
   },
 ];

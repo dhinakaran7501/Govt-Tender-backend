@@ -6,7 +6,11 @@
     "dev": "nodemon src/server.ts",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "db:migrate": "prisma migrate dev"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,js,jsx}": [
@@ -20,19 +24,25 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "For Cron Job:",
   "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "cron": "^3.3.2",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "winston": "^3.17.0"
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.10.0",
+    "winston": "^3.17.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.17.0",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/nodemailer": "^6.4.17",
     "@typescript-eslint/eslint-plugin": "^8.19.0",
     "@typescript-eslint/parser": "^8.19.0",
     "eslint": "^9.17.0",
@@ -42,8 +52,17 @@
     "lint-staged": "^15.3.0",
     "nodemon": "^3.1.9",
     "prettier": "^3.4.2",
+    "prisma": "^6.5.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhinakaran7501/Backend-Nodejs-boilerPlate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhinakaran7501/Backend-Nodejs-boilerPlate/issues"
+  },
+  "homepage": "https://github.com/dhinakaran7501/Backend-Nodejs-boilerPlate#readme"
 }
